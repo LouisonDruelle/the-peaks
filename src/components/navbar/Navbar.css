@@ -1,0 +1,9 @@
+.navbar {
+  padding: 0 165px;
+  background-color: #09357B;
+}
+
+.navbar__logo {
+  padding-top: 31px;
+  padding-bottom: 39px;
+}
