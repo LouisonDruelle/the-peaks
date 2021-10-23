@@ -1,7 +1,10 @@
+import './Home.css';
+import PageTitle from "../../components/pageTitle/PageTitle";
+
 const Home = () => {
   return ( 
     <div className="home">
-      Home
+      <PageTitle title='Top stories' />
     </div>
   );
 }
