@@ -1,0 +1,47 @@
+.article-card {
+  position: relative;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  height: 350px;
+  width: 350px;
+  background: #0D47A1;
+}
+
+.article-card__image {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+}
+
+.article-card__logo {
+  position: absolute;
+  margin: auto;
+  width: 238px;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+
+.article-preview {
+  position: absolute;
+  bottom: 0;
+  padding: 12px;
+  height: 110px;
+  background: rgba(9, 53, 123, 0.9);
+}
+
+.article-preview__title {
+  margin: 0;
+  color: white;
+  line-height: 29px;
+  letter-spacing: 0.07px;
+  font-family: Georgia;
+}
+
+.article-preview__description {
+  margin: 5px 0 0 0;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}

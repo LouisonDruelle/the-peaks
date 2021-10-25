@@ -1,14 +1,17 @@
-import MainTitle from "../../title/mainTitle/MainTitle";
+import './ArticleList.css';
+import ArticleCard from "../articleCard/ArticleCard";
 
-const ArticleList = ({ articles }) => {
+const ArticleList = ({ articles, showDescription=false }) => {
   return (
     <div className="article-list">
-      <MainTitle title='Top stories' />
-
-      {articles.map(article => (
-        <div className="article-preview" key={article.id} >
-          {article.webTitle}
-        </div>
+      {articles.map((article) => (
+        <ArticleCard 
+          image={article.fields.thumbnail}
+          headline={article.fields.headline}
+          description={article.fields.trailText}
+          showDescription={showDescription}
+          key={article.id}
+        />
       ))}
     </div>
   );
