@@ -1,8 +1,8 @@
 import './MainTitle.css';
 
-const MainTitle = ({ title }) => {
+const MainTitle = ({ text }) => {
   return ( 
-    <h1 className="mainTitle">{ title }</h1>
+    <h1 className="mainTitle">{ text }</h1>
   );
 }
  
