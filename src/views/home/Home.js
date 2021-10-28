@@ -1,7 +1,8 @@
 import './Home.css';
 import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
-import Header from 'components/header/Header'
+import Loader from 'components/loader/Loader';
+import Header from 'components/header/Header';
 import MiddleSection from './components/middleSection/MiddleSection';
 import BottomSection from './components/bottomSection/bottomSection';
   
@@ -25,7 +26,7 @@ const Home = () => {
     <div className="home">
       { errorArticles && <div>{ errorArticles }</div> }
       { errorSportArticles && <div>{ errorSportArticles }</div> }
-      { (isLoadingArticles || isLoadingSportArticles) && <div>Loading...</div> }
+      { (isLoadingArticles || isLoadingSportArticles) && <Loader /> }
       { (articles && sportArticles) && 
         <>
           <Header title='Top stories' filter={filter} handleFilterChange={handleFilterChange} />

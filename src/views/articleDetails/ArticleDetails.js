@@ -1,5 +1,6 @@
 import './ArticleDetails.css';
 import useFetch from "../../hooks/useFetch";
+import Loader from 'components/loader/Loader';
 import bookmarkIcon from 'assets/icons/bookmark-icon.svg'
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -19,7 +20,7 @@ const ArticleDetails = ({ bookmarks, handleAddBookmark, handleRemoveBookmark }) 
   return ( 
     <div className="article-details">
       { error && <div>{ error }</div> }
-      { isLoading && <div>Loading...</div> }
+      { isLoading && <Loader /> }
       { article && 
         <div className="article-container">
           <div className="article-content">

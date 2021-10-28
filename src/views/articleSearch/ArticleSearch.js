@@ -1,6 +1,7 @@
 import './ArticleSearch.css';
 import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
+import Loader from 'components/loader/Loader';
 import Header from 'components/header/Header';
 import ArticleList from 'components/article/articleList/ArticleList';
 
@@ -21,7 +22,7 @@ const ArticleSearch = ({ searchText }) => {
   return (  
     <div className="article-search">
       { error && <div>{ error }</div> }
-      { isLoading && <div>Loading...</div> }
+      { isLoading && <Loader /> }
       { articles && 
         <>
           <Header title='Search results' filter={filter} handleFilterChange={handleFilterChange} />

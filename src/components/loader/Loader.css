@@ -1,0 +1,26 @@
+.loader {
+  height: 1500px;
+}
+
+.loader__image {
+  position: absolute;
+    margin: auto;
+    top: 366px;
+    left: 0;
+    right: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .loader__image {
+    animation: loader__image-spin infinite 1s linear;
+  }
+}
+
+@keyframes loader__image-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
