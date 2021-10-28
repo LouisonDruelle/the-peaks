@@ -7,6 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.content {
+  padding: 0 165px;
+  min-height: 1500px;
+}
+
 .text-overflow-on-two-lines {
   overflow: hidden;
   display: -webkit-box;
