@@ -2,6 +2,7 @@ import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import Loader from 'components/loader/Loader';
 import Header from 'components/header/Header';
+import TopSection from './components/topSection/TopSection';
 import MiddleSection from './components/middleSection/MiddleSection';
 import BottomSection from './components/bottomSection/bottomSection';
   
@@ -26,9 +27,10 @@ const Home = () => {
       { errorArticles && <div>{ errorArticles }</div> }
       { errorSportArticles && <div>{ errorSportArticles }</div> }
       { (isLoadingArticles || isLoadingSportArticles) && <Loader /> }
-      { (articles && sportArticles) && 
+      { (articles && sportArticles && !isLoadingArticles && !isLoadingSportArticles) && 
         <>
-          <Header title='Top stories' filter={filter} handleFilterChange={handleFilterChange} />
+          <Header title='Top stories' value={filter} handleFilterChange={handleFilterChange} />
+          <TopSection articles={articles.slice(0, 5)}/>
           <MiddleSection articles={articles.slice(-3)}/>
           <BottomSection articles={sportArticles}/>
         </>

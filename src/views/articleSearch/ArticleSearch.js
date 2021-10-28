@@ -25,7 +25,7 @@ const ArticleSearch = ({ searchText }) => {
       { isLoading && <Loader /> }
       { articles && 
         <>
-          <Header title='Search results' filter={filter} handleFilterChange={handleFilterChange} />
+          <Header title='Search results' value={filter} handleFilterChange={handleFilterChange} />
           <ArticleList articles={articles} />
         </>
       }

@@ -1,3 +1,4 @@
+import './MiddleSection.css';
 import ArticleList from 'components/article/articleList/ArticleList';
 
 const MiddleSection = ({ articles }) => {

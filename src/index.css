@@ -19,6 +19,13 @@ body {
   -webkit-box-orient: vertical;
 }
 
+.text-overflow-on-three-lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 .text-overflow-on-four-lines {
   overflow: hidden;
   display: -webkit-box;
