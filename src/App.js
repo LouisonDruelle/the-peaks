@@ -5,6 +5,7 @@ import Home from 'views/home/Home';
 import ArticleDetails from 'views/articleDetails/ArticleDetails';
 import Bookmarks from 'views/bookmarks/Bookmarks';
 import ArticleSearch from 'views/articleSearch/ArticleSearch';
+import Footer from 'components/footer/Footer';
 
 function App() {
   const [searchText, setSearchText] = useState('');
@@ -57,6 +58,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </div>
     </Router>
   );
