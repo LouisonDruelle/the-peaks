@@ -1,0 +1,21 @@
+.article-details {
+  padding: 0 165px;
+}
+
+.article-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-content {
+  width: 57%;
+}
+
+.article-image {
+  width: 39%;
+}
+
+.gu-image {
+  width: 100%;
+  height: auto;
+}
