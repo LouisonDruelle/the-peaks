@@ -4,9 +4,16 @@ import Navbar from 'components/navbar/Navbar';
 import Home from 'views/home/Home';
 import ArticleDetails from 'views/articleDetails/ArticleDetails';
 import Bookmarks from 'views/bookmarks/Bookmarks';
+import ArticleSearch from 'views/articleSearch/ArticleSearch';
 
 function App() {
+  const [searchText, setSearchText] = useState('');
   const [bookmarks, setBookmarks] = useState([]);
+
+  const handleSearchText = (inputText) => {
+
+    setSearchText(inputText);
+  }
 
   const handleAddBookmark = (article) => {
 
@@ -26,7 +33,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Navbar
+          searchText={searchText}
+          handleSearchText={handleSearchText}
+        />
         <div className="content">
           <Switch>
             <Route exact path="/">
@@ -38,6 +48,9 @@ function App() {
                 handleAddBookmark={handleAddBookmark}
                 handleRemoveBookmark={handleRemoveBookmark}
               />
+            </Route>
+            <Route path="/search">
+              <ArticleSearch searchText={searchText} />
             </Route>
             <Route path="/bookmarks">
               <Bookmarks bookmarks={bookmarks} />
