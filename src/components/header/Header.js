@@ -1,13 +1,16 @@
 import './Header.css';
+import { useHistory } from 'react-router-dom';
 import MainTitle from 'components/title/mainTitle/MainTitle';
 import bookmarkIcon from 'assets/icons/bookmark-icon.svg'
 
 const Header = ({ title, value, handleFilterChange }) => {
+  const history = useHistory();
+  
   return ( 
     <div className="header">
       <MainTitle text={title} />
       <div className="header-container">
-        <button className="header__bookmark-button">
+        <button className="header__bookmark-button" onClick={() => history.push('/bookmarks')}>
           <img className="header__bookmark-icon" src={bookmarkIcon} alt="bookmark icon" />
           view bookmark
         </button>
