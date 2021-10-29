@@ -1,0 +1,26 @@
+.toast {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.toast-message {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  justify-content: center;
+  display: flex;
+  padding: 4px 0;
+}
+
+.success {
+  background: #388E3C;
+}
+
+.alert {
+  background: #D32F2F;
+}

@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.App {
+  position: relative;
+}
+
 .content {
   padding: 0 165px;
   min-height: 1500px;

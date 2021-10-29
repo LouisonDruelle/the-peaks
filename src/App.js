@@ -6,10 +6,13 @@ import ArticleDetails from 'views/articleDetails/ArticleDetails';
 import Bookmarks from 'views/bookmarks/Bookmarks';
 import ArticleSearch from 'views/articleSearch/ArticleSearch';
 import Footer from 'components/footer/Footer';
+import Toast from 'components/toast/Toast';
 
 function App() {
   const [searchText, setSearchText] = useState('');
   const [bookmarks, setBookmarks] = useState([]);
+  const [toastClass, setToastClass] = useState('');
+  const [showToast, setShowToast] = useState(false);
 
   const handleSearchText = (inputText) => {
 
@@ -24,11 +27,23 @@ function App() {
     ];
 
     setBookmarks(updateBookmarks);
+    setToastClass('success');
+
+    setShowToast(true);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 1000);
   }
 
   const handleRemoveBookmark = (article) => {
 
     setBookmarks(bookmarks.filter(item => item.id !== article.id));
+    setToastClass('alert');
+
+    setShowToast(true);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 1000);
   }
 
   return (
@@ -58,6 +73,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        { showToast && <Toast toastClass={toastClass} /> }
         <Footer />
       </div>
     </Router>
