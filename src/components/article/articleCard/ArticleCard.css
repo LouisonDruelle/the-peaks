@@ -79,6 +79,8 @@
   line-height: 29px;
   letter-spacing: 0.07px;
   font-family: Georgia;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .article-preview__description {

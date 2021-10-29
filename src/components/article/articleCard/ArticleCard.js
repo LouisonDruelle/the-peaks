@@ -8,7 +8,7 @@ const ArticleCard = ({ articleSize="m", id, image, headline, description, showIm
       { showImage && image && headline && <img className="article-card__image" src={ image } alt={ headline } /> }
       { (showImage && !image) && <img className="article-card__logo" src={logo} alt="logo the peaks" /> }
       <div className={'article-preview' + (articleSize === 'xs' ? '-xs' : '') + (articleSize === 'xs' && index === 3 ? ' green-border' : '')  + (articleSize === 's' ? '-s' : '') }>
-        { headline && <h3 className={`article-preview__title ${description && showDescription ? "text-overflow-on-two-lines" : "text-overflow-on-four-lines"}`}>{ headline }</h3> }
+        { headline && <div className={'article-preview__title' + (articleSize === 's' || (articleSize === 'm' && !showDescription) ? ' text-overflow-on-three-lines' : '') + (articleSize === 'l' || (articleSize === 'm' && showDescription) ? ' text-overflow-on-two-lines' : '') + (articleSize === 'xs' ? ' text-overflow-on-four-lines' : '')}>{ headline }</div> }
         { showDescription && description && showImage && <div className="article-preview__description text-overflow-on-two-lines" dangerouslySetInnerHTML={{__html: description}} /> }
       </div>
     </Link>
