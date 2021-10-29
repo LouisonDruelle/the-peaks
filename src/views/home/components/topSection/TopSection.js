@@ -1,7 +1,6 @@
 import './TopSection.css';
 import ArticleCard from 'components/article/articleCard/ArticleCard';
 
-
 const TopSection = ({ articles }) => {
 
   return (  
