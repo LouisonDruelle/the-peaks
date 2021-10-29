@@ -11,6 +11,17 @@
   padding-bottom: 39px;
 }
 
+.navbar__search-button {
+  background: #09357B;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid 3px#FFF;
+  cursor: pointer;
+  width: 90px;
+  height: 35px;
+}
+
 .navbar__search-input {
   width: 252px;
   height: 44px;
