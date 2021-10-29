@@ -36,3 +36,24 @@ body {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    padding: 0 80px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .content {
+    padding: 0 60px;
+  }
+}
+@media only screen and (max-width: 768px ) {
+  .content {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .content {
+    padding: 0 20px;
+  }
+}

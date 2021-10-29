@@ -44,3 +44,22 @@
 .header__filter-select:focus {
   outline: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header__bookmark-button {
+    margin-right: 0;
+  }
+}

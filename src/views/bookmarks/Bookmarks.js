@@ -1,4 +1,3 @@
-import './Bookmarks.css';
 import Header from 'components/header/Header'
 import ArticleList from 'components/article/articleList/ArticleList';
 

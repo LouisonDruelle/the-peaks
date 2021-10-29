@@ -1,4 +1,3 @@
-import './ArticleSearch.css';
 import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import Loader from 'components/loader/Loader';

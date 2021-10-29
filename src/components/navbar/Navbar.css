@@ -21,6 +21,37 @@
   border-bottom: solid 3px#FFF;
 }
 
+.navbar__search-input::placeholder {
+  color: #FFF;
+}
+
 .navbar__search-input:focus {
   outline: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar {
+    padding: 0 80px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .navbar {
+    padding: 0 60px;
+  }
+  .navbar__search-input {
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 768px ) {
+  .navbar {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  .navbar__search-input {
+    width: 70px;
+  }
 }

@@ -8,6 +8,7 @@
 
 .article-card-m {
   width: calc(33% - 20px);
+  min-width: 250px;
   position: relative;
   margin-bottom: 30px;
   min-height: 350px;
@@ -97,4 +98,19 @@
 
 .green-border {
   border-bottom: solid 3px #388E3C;
+}
+
+@media only screen and (max-width: 1024px) {
+  .article-card-m {
+    width: calc(50% - 15px);
+  }
+}
+@media only screen and (max-width: 768px ) {
+  .article-card-m, .article-card-s, .article-card-xs {
+    width: 100%;
+  }
+
+  .article-card-xs {
+    margin-bottom: 30px;
+  }
 }
