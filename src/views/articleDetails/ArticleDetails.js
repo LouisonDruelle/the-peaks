@@ -23,7 +23,7 @@ const ArticleDetails = ({ bookmarks, handleAddBookmark, handleRemoveBookmark }) 
       { isLoading && <Loader /> }
       { article && 
         <div className="article-container">
-          <div className="article-content">
+          <div className="article-header">
             { articleIsInBookmarks
               ? <button className="header__bookmark-button" onClick={() => handleRemoveBookmark(article)}>
                   <img className="header__bookmark-icon" src={bookmarkIcon} alt="bookmark icon" />
@@ -34,12 +34,13 @@ const ArticleDetails = ({ bookmarks, handleAddBookmark, handleRemoveBookmark }) 
                   Add bookmark
                 </button>
             }
-            <h1>{article.fields.headline}</h1>
-            { article.fields.trailText && <div dangerouslySetInnerHTML={{__html: article.fields.trailText}} /> }
-            { article.fields.body && <div dangerouslySetInnerHTML={{__html: article.fields.body}} /> }
+            { article.webPublicationDate && <div className="article-details__date">Fri 12 Jun 2020 06.40 BST</div> }
+            { article.fields.headline && <h1 className="article-details__title">{article.fields.headline}</h1> }
+            { article.fields.trailText && <div className="article-details__intro" dangerouslySetInnerHTML={{__html: article.fields.trailText}} /> }
           </div>
-          <div className="article-image">
-            { article.fields.main && <div dangerouslySetInnerHTML={{__html: article.fields.main}} /> }
+          <div className="article-content">
+            { article.fields.body && <div className="article-details__content" dangerouslySetInnerHTML={{__html: article.fields.body}} /> }
+            { article.fields.main && <div className="article-image" dangerouslySetInnerHTML={{__html: article.fields.main}} /> }
           </div>
         </div>
       }
