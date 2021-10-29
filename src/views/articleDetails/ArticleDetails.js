@@ -2,11 +2,21 @@ import './ArticleDetails.css';
 import useFetch from "../../hooks/useFetch";
 import Loader from 'components/loader/Loader';
 import bookmarkIcon from 'assets/icons/bookmark-icon.svg'
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+import advanced from 'dayjs/plugin/advancedFormat';
+
 
 const API_URL = process.env.REACT_APP_API_URL;
 const API_KEY = process.env.REACT_APP_API_KEY;
 
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.extend(advanced);
+
 const ArticleDetails = ({ bookmarks, handleAddBookmark, handleRemoveBookmark }) => {
+
   let articleIsInBookmarks = false;
   const articleId = window.location.pathname.slice(10);
   const API_URL_TO_FETCH_SINGLE_ARTICLE = `${API_URL}${articleId}?show-fields=all&api-key=${API_KEY}`;
@@ -34,7 +44,7 @@ const ArticleDetails = ({ bookmarks, handleAddBookmark, handleRemoveBookmark }) 
                   Add bookmark
                 </button>
             }
-            { article.webPublicationDate && <div className="article-details__date">Fri 12 Jun 2020 06.40 BST</div> }
+            { article.webPublicationDate && <div className="article-details__date">{ dayjs(article.webPublicationDate).tz().format('ddd DD MMM YYYY H.mm z') }</div> }
             { article.fields.headline && <h1 className="article-details__title">{article.fields.headline}</h1> }
             { article.fields.trailText && <div className="article-details__intro" dangerouslySetInnerHTML={{__html: article.fields.trailText}} /> }
           </div>
