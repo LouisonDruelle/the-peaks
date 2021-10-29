@@ -10,10 +10,11 @@ const Header = ({ title, value, handleFilterChange }) => {
     <div className="header">
       <MainTitle text={title} />
       <div className="header-container">
-        <button className="header__bookmark-button" onClick={() => history.push('/bookmarks')}>
+        { title !== 'All bookmark' && <button className="header__bookmark-button" onClick={() => history.push('/bookmarks')}>
           <img className="header__bookmark-icon" src={bookmarkIcon} alt="bookmark icon" />
           view bookmark
         </button>
+        }
         <select className="header__filter-select" name='filter' value={value} onChange={handleFilterChange}>
           <option value="newest">Newest first</option>
           <option value="oldest">Oldest first</option>
