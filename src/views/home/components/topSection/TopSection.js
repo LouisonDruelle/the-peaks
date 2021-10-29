@@ -28,6 +28,7 @@ const TopSection = ({ articles }) => {
                   headline={article.fields.headline}
                   description={article.fields.trailText}
                   showDescription={false}
+                  index={index}
                 />
               : <ArticleCard
                   articleSize="xs"
@@ -36,6 +37,7 @@ const TopSection = ({ articles }) => {
                   headline={article.fields.headline}
                   description={article.fields.trailText}
                   showDescription={false}
+                  index={index}
                 />
             }
           </div>
