@@ -17,6 +17,7 @@ const Navbar = ({ searchText, handleSearchText }) => {
         <img className="navbar__logo" src={logo} alt="logo the peaks" />
       </Link>
       <input
+        className="navbar__search-input"
         type="text"
         placeholder="Search all news"
         value={searchText}

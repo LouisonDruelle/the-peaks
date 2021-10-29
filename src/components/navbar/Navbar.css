@@ -10,3 +10,17 @@
   padding-top: 31px;
   padding-bottom: 39px;
 }
+
+.navbar__search-input {
+  width: 252px;
+  height: 44px;
+  background: #2153A3;
+  border: none;
+  padding: 0 24px;
+  color: #FFF;
+  border-bottom: solid 3px#FFF;
+}
+
+.navbar__search-input:focus {
+  outline: none;
+}

@@ -30,3 +30,17 @@
 .header__bookmark-icon {
   margin-right: 5px;
 }
+
+.header__filter-select {
+  width: 255px;
+  height: 45px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid;
+  font-size: 16px;
+}
+
+.header__filter-select:focus {
+  outline: none;
+}
